@@ -1,27 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>NASA Image Search</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>NASA Image Search</title>
+  <!-- Optional: link to external CSS if you have a styles.css -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="contact.html">Contact Me</a></li>
-			</ul>
-		</nav>
-		<h1>NASA Image Search</h1>
-		<form id="search-form">
-			<label for="search-input">Search:</label>
-			<input type="text" id="search-input" name="search-input">
-			<button type="submit">Search</button>
-		</form>
-	</header>
-	<main id="search-results"></main>
+  <header>
+    <h1>NASA Image Search</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
 
-	<script src="app.js"></script>
+    <!-- Search Form -->
+    <form id="search-form">
+      <label for="search-input">Search Term:</label>
+      <input 
+        type="text"
+        id="search-input"
+        name="search-input"
+        placeholder="e.g. Apollo 11"
+      />
+
+      <label for="year-start">Year Start:</label>
+      <input 
+        type="number"
+        id="year-start"
+        name="year-start"
+        placeholder="1960"
+      />
+
+      <label for="year-end">Year End:</label>
+      <input 
+        type="number"
+        id="year-end"
+        name="year-end"
+        placeholder="1970"
+      />
+
+      <label for="media-type">Media Type:</label>
+      <select id="media-type" name="media-type">
+        <option value="">All</option>
+        <option value="image">Image</option>
+        <option value="video">Video</option>
+        <option value="audio">Audio</option>
+      </select>
+
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <main id="search-results">
+    <!-- Results will appear here -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NASA Image Search Project</p>
+  </footer>
+
+  <!-- Reference our JavaScript file -->
+  <script src="app.js"></script>
 </body>
 </html>
